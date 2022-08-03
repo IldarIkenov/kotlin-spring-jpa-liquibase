@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: entity-table-create
+      author: test
+      changes:
+        - createTable:
+            tableName: entity
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                  name: id
+                  type: UUID
+              - column:
+                  name: documentID
+                  type: UUID
+              - column:
+                  name: documentDate
+                  type: VARCHAR(10)
+              - column:
+                  name: dictionaryValueId
+                  type: UUID
+              - column:
+                  name: dictionaryValueName
+                  type: VARCHAR(30)
+              - column:
+                  name: sortOrder
+                  type: VARCHAR(50)
